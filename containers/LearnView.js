@@ -6,12 +6,8 @@ import {LearnList} from "../components/LearnList";
 export default class LearnView extends Component {
   static navigationOptions = {
     title: 'Topics',
-    headerStyle: {
-      backgroundColor: colors.lemongreen
-    },
-    headerTitleStyle: {
-      color: colors.lemontext
-    }
+    headerStyle: myStyles.header,
+    headerTitleStyle: myStyles.headertitle,
   }
 
   constructor(props) {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Text, View, Slider } from 'react-native';
+import { Text, View, Slider } from 'react-native';
+import Button from '../../components/Button';
 import myStyles from '../../Styles';
 
 export default class TimeQuestion extends Component {
@@ -27,18 +28,22 @@ export default class TimeQuestion extends Component {
     console.log(this.props.navigation.state.params);
     return (
         <View style={myStyles.container}>
-          <Slider
-            minimumValue={30}
-            step={1}
-            maximumValue={180}
-            value={this.state.days}
-            onValueChange={(val) => (this.setState({days:val}))}
-            />
-          <Text style={myStyles.plaintext}>{this.state.days}</Text>
-          <Button style={myStyles.confirm} title="Confirm"
-            onPress={() => {
-              navigate("ResultsQ", this._getUpdatedOptions(this.state.days));
-            }}/>
+          <Text style={myStyles.plaintext}>What is the ideal timeframe in days of your investment</Text>
+          <View style={myStyles.buttoncontainer}>
+            <Slider
+              width={200}
+              minimumValue={30}
+              step={1}
+              maximumValue={180}
+              value={this.state.days}
+              onValueChange={(val) => (this.setState({days:val}))}
+              />
+            <Text style={myStyles.plaintext}>{this.state.days}</Text>
+            <Button style={myStyles.confirm} title="Confirm"
+              onPress={() => {
+                navigate("ResultsQ", this._getUpdatedOptions(this.state.days));
+              }}/>
+          </View>
         </View>
     );
   }

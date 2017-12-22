@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import Button from '../../components/Button';
 import myStyles from '../../Styles';
 
 export default class ResultsQuestion extends Component {

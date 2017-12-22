@@ -6,12 +6,8 @@ import myStyles, {colors} from '../Styles';
 export default class FundsView extends Component {
   static navigationOptions = {
     title: 'Funds',
-    headerStyle: {
-      backgroundColor: colors.lemongreen
-    },
-    headerTitleStyle: {
-      color: colors.lemontext
-    }
+    headerStyle: myStyles.header,
+    headerTitleStyle: myStyles.headertitle,
   }
 
   constructor(props) {

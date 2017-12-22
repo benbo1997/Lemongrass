@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import Button from '../../components/Button';
 import myStyles from '../../Styles';
 
 export default class PurposeQuestion extends Component {
@@ -17,24 +18,27 @@ export default class PurposeQuestion extends Component {
     console.log(this.props.navigation.state.params);
     return (
         <View style={myStyles.container}>
-          <Button
-              onPress = {() => {
-                navigate('RiskQ', {purpose: "College"});
-              }}
-              title = "College"
-          />
-          <Button
-              onPress = {() => {
-                navigate('RiskQ', {purpose: "Bank alternative"});
-              }}
-              title = "Bank alternative"
-          />
-          <Button
-              onPress = {() => {
-                navigate('RiskQ', {purpose: "Retrieval"});
-              }}
-              title = "Retrieval"
-          />
+          <Text style={myStyles.plaintext}>What is the main purpose behind your investment:</Text>
+          <View style={myStyles.buttoncontainer}>
+            <Button
+                onPress = {() => {
+                  navigate('RiskQ', {purpose: "College"});
+                }}
+                title = "College"
+            />
+            <Button
+                onPress = {() => {
+                  navigate('RiskQ', {purpose: "Bank alternative"});
+                }}
+                title = "Bank alternative"
+            />
+            <Button
+                onPress = {() => {
+                  navigate('RiskQ', {purpose: "Retrieval"});
+                }}
+                title = "Retrieval"
+            />
+          </View>
         </View>
     );
   }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Button, Text, View } from 'react-native';
-import myStyles from '../Styles';
+import { Text, View } from 'react-native';
+import Button from '../components/Button';
+import myStyles, {colors} from '../Styles';
 
 export default class HomeView extends Component {
   static navigationOptions = {
@@ -16,19 +17,20 @@ export default class HomeView extends Component {
     let {navigate} = this.props.navigation;
     return (
         <View style={myStyles.homecontainer}>
-          <Text style={myStyles.plaintext}>Welcome to Lemongrass</Text>
-          <Button
-              onPress={() =>
-                navigate('Learn')
-              }
-              title="Learn"
-          />
-          <Button
-              onPress={() =>
-                navigate('PurposeQ')
-              }
-              title="Invest"
-          />
+          <View style={myStyles.buttoncontainer}>
+            <Button
+                onPress={() =>
+                  navigate('Learn')
+                }
+                title="Learn"
+            />
+            <Button
+                onPress={() =>
+                  navigate('PurposeQ')
+                }
+                title="Invest"
+            />
+          </View>
         </View>
     );
   }

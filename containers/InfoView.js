@@ -5,12 +5,8 @@ import myStyles, {colors} from '../Styles';
 export default class InfoView extends Component {
   static navigationOptions = ({navigation}) => ({
     title: navigation.state.params.title,
-    headerStyle: {
-      backgroundColor: colors.lemongreen
-    },
-    headerTitleStyle: {
-      color: colors.lemontext
-    }
+    headerStyle: myStyles.header,
+    headerTitleStyle: myStyles.headertitle,
   });
 
   render() {

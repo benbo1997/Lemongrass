@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, Button, View, SectionList, Alert, TouchableHighlight} from 'react-native';
-import myStyles from '../Styles';
+import myStyles, {colors} from '../Styles';
 
 class ListItem extends Component {
   constructor(props) {
@@ -33,7 +33,9 @@ class ListHeader extends Component {
 
   render () {
     return (
+        <View style={ {padding: 15, backgroundColor: colors.lemondarkgreen}}>
         <Text style={myStyles.subtitle}>{this.props.title}</Text>
+        </View>
     );
   }
 }
