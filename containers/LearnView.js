@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import myStyles, {colors} from '../Styles';
-import {LearnList} from "../components/LearnList";
+import {FlatLearnList} from "../components/FlatLearnList";
 
 export default class LearnView extends Component {
   static navigationOptions = {
@@ -22,7 +22,7 @@ export default class LearnView extends Component {
     let {navigate} = this.props.navigation;
     return (
         <View style={myStyles.container}>
-          <LearnList onRowPress={(params) => {this.navigateToListItem(params)}}/>
+          <FlatLearnList onRowPress={(params) => {this.navigateToListItem(params)}}/>
         </View>
     );
   }

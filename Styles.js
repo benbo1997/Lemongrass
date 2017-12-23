@@ -6,6 +6,15 @@ export const colors = {
   lemongreen: '#86c232',
   lemondarkgreen: '#61892F',
   lightgrey: '#e9ecef',
+  sky: '#7CD8D5',
+  electric: '#4cdef5',
+  cyan: '#62EDD6',
+  aqua: '#008F95',
+  ink: '#062F4F',
+  azure: '#01ABAA',
+  violet: '#6E3667',
+  teal: '#07889b',
+  background: '#6e3667',
 }
 
 export default styles = StyleSheet.create({
@@ -23,18 +32,44 @@ export default styles = StyleSheet.create({
   },
   buttontext: {
     fontSize: 24,
-    color: colors.lightgrey,
+    color: '#fff',
+    textAlign: 'center',
   },
   listitem: {
     width: width,
   },
   optionlist: {
+    paddingLeft: 5,
+    paddingRight: 5,
     flex: 1,
+  },
+  twoButtonText: {
+    padding:5,
+    color: '#fff',
+    fontSize:18,
+  },
+  twoButtonDesc: {
+    padding:5,
+    fontSize:14,
+    color: '#111'
+  },
+  twoButtonOuter: {
+    width:(width - 20),
+    backgroundColor: colors.lemongreen,
+    margin:5,
+    elevation: 3,
+  },
+  twoButtonUpper: {
+    backgroundColor: colors.lemongreen,
+    margin: 5,
+  },
+  twoButtonLower: {
+    backgroundColor: '#fff',
+    margin: 5,
   },
   button: {
     backgroundColor: colors.lemongreen,
     width: (width - 100),
-    borderRadius: 30,
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop: 5,
@@ -42,22 +77,25 @@ export default styles = StyleSheet.create({
     margin: 5,
     alignContent: 'center',
     flexDirection: 'column',
+    shadowOffset:{width: 10, height:10},
+    shadowColor:'#000',
+    shadowRadius: 5,
+    shadowOpacity:1.0,
+    elevation: 3,
   },
   buttoncontainer:{
     flexDirection: 'column',
-    backgroundColor: '#fff',
+    backgroundColor: colors.lightgrey,
     alignItems: 'center',
   },
   homecontainer:{
     flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: colors.lightgrey,
     alignItems: 'center',
   },
   container: {
-    padding:5,
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: colors.lightgrey,
     alignItems: 'center',
     justifyContent: 'center',
   },

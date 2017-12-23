@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, Button, View, SectionList, Alert, TouchableHighlight} from 'react-native';
 import myStyles, {colors} from '../Styles';
+import TwoColourButton from "./TwoColourButton";
 
 class ListItem extends Component {
   constructor(props) {
@@ -16,12 +17,16 @@ class ListItem extends Component {
 
   render () {
     return (
-        <TouchableHighlight onPress={() => {this._onPress()}}>
-          <View style={myStyles.listitem}>
-            <Text style={myStyles.subtitle}>{this.props.title}</Text>
-            <Text style={myStyles.plaintext}>{this.props.description}</Text>
-          </View>
-        </TouchableHighlight>
+        <TwoColourButton
+          title={this.props.title}
+          description={this.props.description}
+          onPress={() => {this._onPress()}}/>
+        // <TouchableHighlight onPress={() => {this._onPress()}}>
+        //   <View style={myStyles.listitem}>
+        //     <Text style={myStyles.subtitle}>{this.props.title}</Text>
+        //     <Text style={myStyles.plaintext}>{this.props.description}</Text>
+        //   </View>
+        // </TouchableHighlight>
     )
   }
 }
