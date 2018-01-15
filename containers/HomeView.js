@@ -40,6 +40,12 @@ export default class HomeView extends Component {
                 }
                 title="INVEST"
             />
+            <Button
+                onPress={() =>
+                    navigate('Quiz')
+                }
+                title="QUIZ"
+            />
           </View>
         </View>
     );

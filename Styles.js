@@ -30,13 +30,25 @@ export default styles = StyleSheet.create({
   subtitle: {
     fontSize: 24,
   },
+  questiontext: {
+    fontSize: 24,
+    padding: 10,
+  },
+  resulttext: {
+    fontSize: 24,
+    padding: 10,
+    textAlign: 'center',
+  },
   buttontext: {
     fontSize: 24,
     color: '#fff',
     textAlign: 'center',
   },
   listitem: {
-    width: width,
+    backgroundColor: colors.azure,
+    margin: 5,
+    padding: 5,
+    width: width - 10,
   },
   optionlist: {
     paddingLeft: 5,
