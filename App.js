@@ -9,6 +9,8 @@ const store = createStore(reducer);
 
 export default class App extends Component {
   render() {
+    console.log("Main App:");
+    console.log(store.getState());
     return (
         <Provider store={store}>
           <LemonGrassApp />
