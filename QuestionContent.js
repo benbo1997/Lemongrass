@@ -3,7 +3,7 @@ import React from 'react';
 export default questions = [
   {
     question: 'What is the capital of England?',
-    correctids: [0],
+    correctid: 0,
     answers: [
       {
         text:'London',
@@ -26,7 +26,7 @@ export default questions = [
 
   {
     question: 'What is Ben\'s favourite colour?',
-    correctids: [4],
+    correctid: 4,
     answers: [
       {
         text:'Blue',

@@ -5,6 +5,18 @@ import BackButton from "../BackButton";
 import questions from "../../QuestionContent";
 import Question from "./Question";
 
+function markQuiz(answerArray) {
+  let score = 0;
+
+  for (i = 0; i < questions.length; i++) {
+    if (questions[i].correctid == answerArray[i]) {
+      score ++;
+    }
+  }
+
+  return score;
+}
+
 export default class Quiz extends Component {
   static navigationOptions = ({navigation}) => ({
     title: 'Quiz',
@@ -35,6 +47,8 @@ export default class Quiz extends Component {
     return this.props.questions.questionid >= questions.length;
   }
 
+
+
   render() {
     console.log("Rendering...");
     console.log(this.props.questions);
@@ -44,7 +58,7 @@ export default class Quiz extends Component {
       return (
           <View style={myStyles.container}>
             <Text style={myStyles.resulttext}>Congratulations, you've completed the quiz!</Text>
-            <Text style={myStyles.resulttext}>You scored {this.state.score} points</Text>
+            <Text style={myStyles.resulttext}>You scored {markQuiz(this.props.questions.pastAnswers)} points</Text>
           </View>
       );
     }
