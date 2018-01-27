@@ -1,1 +1,2 @@
 export const CHANGE_QUESTION = 'CHANGE_QUESTION';
+export const SUBMIT_ANSWER = 'SUBMIT_ANSWER';
