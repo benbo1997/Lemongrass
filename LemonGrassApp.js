@@ -5,10 +5,6 @@ import FundsView from './containers/FundsView';
 import HomeView from './containers/HomeView';
 import InfoView from './containers/InfoView';
 import LearnView from './containers/LearnView';
-import RiskQuestion from "./containers/questionnaire/RiskQuestion";
-import PurposeQuestion from "./containers/questionnaire/PurposeQuestion";
-import TimeQuestion from "./containers/questionnaire/TimeQuestion";
-import ResultsQuestion from "./containers/questionnaire/ResultsQuestion";
 import QuizView from "./containers/QuizView";
 
 const AppNav = StackNavigator(
@@ -18,10 +14,6 @@ const AppNav = StackNavigator(
       Info: {screen: InfoView},
       Learn: {screen: LearnView},
       Quiz: {screen: QuizView},
-      RiskQ: {screen: RiskQuestion},
-      PurposeQ: {screen: PurposeQuestion},
-      TimeQ: {screen: TimeQuestion},
-      ResultsQ: {screen: ResultsQuestion},
     },
     {
       cardStyle: {
