@@ -1,12 +1,16 @@
 import * as types from '../actions/actionTypes';
 import {combineReducers} from 'redux';
 
-const initialState = {
+const initialQuestionsState = {
   questionid: 0,
   pastAnswers: [],
 };
 
-function questions (state = initialState, action) {
+const initialQuizState = {
+  quizzes: [],
+};
+
+function questions (state = initialQuestionsState, action) {
   switch (action.type) {
     case types.CHANGE_QUESTION:
       return {
@@ -16,8 +20,8 @@ function questions (state = initialState, action) {
     case types.SUBMIT_ANSWER:
       // this could be changed to update the index of the array based on
       // question id
-        var newAnswers = state.pastAnswers.slice();
-        newAnswers[state.questionid] = action.answerId;
+      var newAnswers = state.pastAnswers.slice();
+      newAnswers[state.questionid] = action.answerId;
       return {
           ...state,
           pastAnswers: newAnswers,
@@ -27,8 +31,21 @@ function questions (state = initialState, action) {
   }
 }
 
+function quizzes (state = initialQuizState, action) {
+  switch (action.type) {
+    case types.LOAD_QUIZZES_RECIEVED:
+      return {
+          ...state,
+          quizzes: action.quizzes,
+      };
+    default:
+      return state;
+  }
+}
+
 const quizReducers = combineReducers({
   questions,
+  quizzes,
 });
 
 export default quizReducers

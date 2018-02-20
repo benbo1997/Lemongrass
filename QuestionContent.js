@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default questions = [
+
   {
     question: 'What is the capital of England?',
     correctid: 0,

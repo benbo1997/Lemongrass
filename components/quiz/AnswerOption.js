@@ -13,8 +13,6 @@ export default class Answer extends Component {
   }
 
   render () {
-    console.log("Rendering button");
-    console.log(this.props);
     return (
         <TouchableHighlight onPress={() => {this._onPress()}}>
           <View style={myStyles.listitem}>
