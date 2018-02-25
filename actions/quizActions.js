@@ -1,7 +1,7 @@
 import {
   CHANGE_QUESTION,
   SUBMIT_ANSWER,
-  LOAD_QUIZZES_RECIEVED
+  LOAD_QUIZ_RECIEVED
 } from "./actionTypes";
 
 export function changeQuestion(qid) {
@@ -18,9 +18,9 @@ export function submitAnswer(id) {
   }
 }
 
-export function loadQuizzesRecieved(quizzes) {
+export function loadQuizRecieved(quiz) {
   return {
-    type: LOAD_QUIZZES_RECIEVED,
-    quizzes: quizzes,
+    type: LOAD_QUIZ_RECIEVED,
+    quiz: quiz,
   }
 }

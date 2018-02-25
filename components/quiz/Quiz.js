@@ -30,7 +30,6 @@ export default class Quiz extends Component {
     super(props);
 
     // this function loads our quiz data into the store
-    this.props.loadQuizzesRecieved(questions);
   }
 
   submitAnswer(id) {
@@ -43,17 +42,16 @@ export default class Quiz extends Component {
   }
 
   isFinished() {
-    return this.props.questions.questionid >= this.props.quizzes.quizzes.length;
+    let numQuestions = this.props.quizzes.quizzes[0].content.length;
+    return this.props.questions.questionid >= numQuestions;
   }
-
-
 
   render() {
     console.log("Rendering...");
     console.log(this.props.questions);
     console.log(this.props.quizzes);
     let qid = this.props.questions.questionid;
-    let quiz = this.props.quizzes.quizzes;
+    let quiz = this.props.quizzes.quizzes[0].content;
 
     if (this.isFinished()) {
       return (

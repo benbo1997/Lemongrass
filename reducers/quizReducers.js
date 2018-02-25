@@ -33,10 +33,10 @@ function questions (state = initialQuestionsState, action) {
 
 function quizzes (state = initialQuizState, action) {
   switch (action.type) {
-    case types.LOAD_QUIZZES_RECIEVED:
+    case types.LOAD_QUIZ_RECIEVED:
       return {
           ...state,
-          quizzes: action.quizzes,
+          quizzes:  [...state.quizzes, action.quiz],
       };
     default:
       return state;
