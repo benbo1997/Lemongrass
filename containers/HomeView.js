@@ -36,7 +36,7 @@ export default class HomeView extends Component {
             />
             <Button
                 onPress={() =>
-                    navigate('Quiz')
+                    navigate('QuizList')
                 }
                 title="train"
             />
