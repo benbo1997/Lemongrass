@@ -26,7 +26,7 @@ export default questions = [
 
   {
     question: 'What is Ben\'s favourite colour?',
-    correctid: 4,
+    correctid: 3,
     answers: [
       {
         text:'Blue',
@@ -41,12 +41,8 @@ export default questions = [
         id: 2,
       },
       {
-        text:'Purple',
-        id: 3
-      },
-      {
         text:'Ben doesn\'t see colour',
-        id: 4
+        id: 3
       },
     ]
   },
