@@ -2,6 +2,11 @@
 
 # expo
 .expo/
+package-lock.json
+yarn.lock
+.DS_Store
+resources/.DS_Store
+
 
 # dependencies
 /node_modules
