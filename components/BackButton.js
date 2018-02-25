@@ -12,7 +12,7 @@ export default class BackButton extends Component {
           <TouchableWithoutFeedback
               onPress={this.props.onPress}>
             <View>
-              <Icon name={'chevron-left'} size={20} style={{marginLeft: 10, color: '#fff'}}/>
+              <Icon name={'chevron-left'} size={15} style={{marginLeft: 10, color: '#fff'}}/>
             </View>
           </TouchableWithoutFeedback>
     )
