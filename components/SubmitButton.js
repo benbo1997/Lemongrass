@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Platform, Text, View, SectionList, Alert, TouchableHighlight, ActivityIndicator} from 'react-native';
 import myStyles, {colors} from '../Styles';
-import SubmitButton from 'react-native-micro-animated-button';
+import AnimatedButton from 'react-native-micro-animated-button';
 
-export default class Button extends Component {
+export default class SubmitButton extends Component {
   constructor(props) {
     super(props);
   }
@@ -16,7 +16,7 @@ export default class Button extends Component {
   render() {
     return (
       <View style={myStyles.submitButton}>
-        <SubmitButton
+        <AnimatedButton
           foregroundColor={colors.lemongreen}
           label={"Submit"}
           onPress={ () => {this.b1.success()} }

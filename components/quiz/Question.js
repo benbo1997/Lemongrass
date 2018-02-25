@@ -3,7 +3,7 @@ import { Text, View, FlatList} from 'react-native';
 import myStyles, {colors} from '../../Styles';
 import BackButton from "../BackButton";
 import questions from "../../QuestionContent";
-import Button from "../Button";
+import SubmitButton from "../SubmitButton";
 import AnswerOption from "./AnswerOption";
 
 export default class Question extends Component {
@@ -38,7 +38,7 @@ export default class Question extends Component {
                   currAnswer={this.state.currAnswer}
         />
         <View style={myStyles.buttoncontainer}>
-          <Button onPress={() => {this.submitAnswer()}} title={"SUBMIT"}/>
+          <SubmitButton onPress={() => {this.submitAnswer()}} title={"SUBMIT"}/>
         </View>
       </View>
     );
