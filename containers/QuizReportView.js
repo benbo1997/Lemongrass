@@ -4,6 +4,7 @@ import BackButton from '../components/BackButton';
 import { withMappedNavigationProps } from 'react-navigation-props-mapper';
 import myStyles, {colors} from '../Styles';
 import QuizReport from "../components/report/QuizReport";
+import Button from "../components/Button";
 
 @withMappedNavigationProps()
 export default class QuizReportView extends Component {
@@ -21,6 +22,7 @@ export default class QuizReportView extends Component {
     return (
         <View style={myStyles.container}>
           <QuizReport content={this.props.content} userAnswers={this.props.userAnswers}/>
+          <Button title={"learn"} style={myStyles.button} onPress={()=>{this.props.navigation.navigate('Learn')}} />
         </View>
     );
   }
