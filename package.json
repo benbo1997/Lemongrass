@@ -25,6 +25,7 @@
     "react-native-activity-indicator": "0.0.4",
     "react-native-elements": "^0.18.5",
     "react-native-micro-animated-button": "^0.0.15",
+    "react-native-modal": "^5.1.0",
     "react-native-vector-icons": "^4.5.0",
     "react-navigation": "^1.0.0-beta.22",
     "react-redux": "^5.0.6",

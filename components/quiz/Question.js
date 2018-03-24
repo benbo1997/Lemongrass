@@ -5,6 +5,7 @@ import BackButton from "../BackButton";
 import questions from "../../QuestionContent";
 import SubmitButton from "../SubmitButton";
 import AnswerOption from "./AnswerOption";
+import HintButton from "../HintButton";
 
 export default class Question extends Component {
 
@@ -37,6 +38,7 @@ export default class Question extends Component {
                                                         onRowPress={(id) => {this.selectAnswer(id)}}/>}
                   currAnswer={this.state.currAnswer}
         />
+        <HintButton/>
         <View style={myStyles.buttoncontainer}>
           <SubmitButton onPress={() => {this.submitAnswer()}} title={"SUBMIT"}/>
         </View>

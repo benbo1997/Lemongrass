@@ -138,4 +138,12 @@ export default styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  hintContainer: {
+    backgroundColor: "white",
+    padding: 22,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 4,
+    borderColor: "rgba(0, 0, 0, 0.1)"
+  }
 });
