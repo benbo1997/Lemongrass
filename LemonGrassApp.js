@@ -7,6 +7,7 @@ import InfoView from './containers/InfoView';
 import LearnView from './containers/LearnView';
 import QuizView from "./containers/QuizView";
 import QuizListView from "./containers/QuizListView";
+import QuizReportView from "./containers/QuizReportView";
 
 const AppNav = StackNavigator(
     {
@@ -16,6 +17,7 @@ const AppNav = StackNavigator(
       Learn: {screen: LearnView},
       Quiz: {screen: QuizView},
       QuizList: {screen: QuizListView},
+      QuizReport: {screen: QuizReportView},
     },
     {
       cardStyle: {

@@ -2,6 +2,7 @@ import * as types from '../actions/actionTypes';
 import {combineReducers} from 'redux';
 
 const initialQuestionsState = {
+  answered: 0,
   questionid: 0,
   pastAnswers: [],
 };
@@ -26,6 +27,13 @@ function questions (state = initialQuestionsState, action) {
           ...state,
           pastAnswers: newAnswers,
       };
+    case types.RESET_QUIZ:
+      // this currently updates the number of quizzes answered.
+      return {
+          answered: state.answered + 1,
+          questionid: 0,
+          pastAnswers: [],
+      };
     default:
       return state;
   }
@@ -34,6 +42,11 @@ function questions (state = initialQuestionsState, action) {
 function quizzes (state = initialQuizState, action) {
   switch (action.type) {
     case types.LOAD_QUIZ_RECIEVED:
+      // this is a potentially heavy check, however it is necessary in lieu of
+      // an appropriate Set type
+      if (state.quizzes.includes(action.quiz)) {
+        return state;
+      }
       return {
           ...state,
           quizzes:  [...state.quizzes, action.quiz],

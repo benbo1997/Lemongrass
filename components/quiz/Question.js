@@ -27,6 +27,7 @@ export default class Question extends Component {
   }
 
   render() {
+    // TODO lock in selected answer while submit button pressed
     return (
       <View style={myStyles.question}>
         <Text style={myStyles.questiontext}>{this.props.text}</Text>

@@ -11,6 +11,7 @@ export default class InfoView extends Component {
 
   render() {
     const {params} = this.props.navigation.state;
+    // TODO remove hardcoded styles as in QuizReportView
     return (
       <View style={{
         flex: 1,
