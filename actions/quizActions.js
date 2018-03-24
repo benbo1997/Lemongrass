@@ -1,7 +1,7 @@
 import {
   CHANGE_QUESTION,
   SUBMIT_ANSWER,
-  LOAD_QUIZ_RECIEVED
+  LOAD_QUIZ_RECIEVED, RESET_ANSWERS
 } from "./actionTypes";
 
 export function changeQuestion(qid) {
@@ -15,6 +15,12 @@ export function submitAnswer(id) {
   return {
     type: SUBMIT_ANSWER,
     answerId: id,
+  }
+}
+
+export function resetQuiz() {
+  return {
+    type: RESET_QUIZ,
   }
 }
 

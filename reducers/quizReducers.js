@@ -26,6 +26,8 @@ function questions (state = initialQuestionsState, action) {
           ...state,
           pastAnswers: newAnswers,
       };
+    case types.RESET_QUIZ:
+      return initialQuestionsState;
     default:
       return state;
   }

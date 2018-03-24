@@ -1,3 +1,4 @@
 export const CHANGE_QUESTION = 'CHANGE_QUESTION';
 export const SUBMIT_ANSWER = 'SUBMIT_ANSWER';
+export const RESET_QUIZ = 'RESET_QUIZ';
 export const LOAD_QUIZ_RECIEVED =  'LOAD_QUIZ_RECIEVED';
