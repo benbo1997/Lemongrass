@@ -4,7 +4,7 @@ export default questions = [
   {
     title: "QUIZ NUMBER 1",
     description: "The first quiz",
-    id: 1,
+    id: 0,
     key: '1',
     content: [
       {

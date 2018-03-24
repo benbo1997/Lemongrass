@@ -34,6 +34,11 @@ function questions (state = initialQuestionsState, action) {
 function quizzes (state = initialQuizState, action) {
   switch (action.type) {
     case types.LOAD_QUIZ_RECIEVED:
+      // this is a potentially heavy check, however it is necessary in lieu of
+      // an appropriate Set type
+      if (state.quizzes.includes(action.quiz)) {
+        return state;
+      }
       return {
           ...state,
           quizzes:  [...state.quizzes, action.quiz],
