@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, FlatList} from 'react-native';
+import Button from '../Button';
 import myStyles, {colors} from '../../Styles';
 import { withMappedNavigationProps } from 'react-navigation-props-mapper';
 import BackButton from "../BackButton";
@@ -30,10 +31,6 @@ export default class Quiz extends Component {
 
   constructor(props) {
     super(props);
-    console.log("Hello");
-    console.log(this.props.quizid);
-    console.log(this.props.title);
-    // this function loads our quiz data into the store
   }
 
   submitAnswer(id) {
@@ -42,8 +39,13 @@ export default class Quiz extends Component {
   }
 
   nextQuestion() {
-    let quizid = this.props.navigati
     this.props.changeQuestion(this.props.questions.questionid + 1);
+  }
+
+  // For proceeding after quiz completion
+  onProceed() {
+    this.props.resetQuiz();
+    this.props.navigation.navigate('QuizList');
   }
 
   getQuizContent(searchid) {
@@ -60,9 +62,7 @@ export default class Quiz extends Component {
   }
 
   render() {
-    console.log("Rendering...");
-    console.log(this.props.questions);
-    console.log(this.props.quizzes);
+    console.log("Rendering Quiz...");
     let questionid = this.props.questions.questionid;
     let quizcontent = this.getQuizContent(this.props.quizid);
 
@@ -71,6 +71,7 @@ export default class Quiz extends Component {
           <View style={myStyles.container}>
             <Text style={myStyles.resulttext}>Congratulations, you've completed the quiz!</Text>
             <Text style={myStyles.resulttext}>You scored {markQuiz(this.props.questions.pastAnswers, quizcontent)} points</Text>
+            <Button style={myStyles.button} title={"proceed"} onPress={() => {this.onProceed()}}></Button>
           </View>
       );
     }

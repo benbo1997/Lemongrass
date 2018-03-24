@@ -1,7 +1,8 @@
 import {
   CHANGE_QUESTION,
   SUBMIT_ANSWER,
-  LOAD_QUIZ_RECIEVED, RESET_ANSWERS
+  RESET_QUIZ,
+  LOAD_QUIZ_RECIEVED,
 } from "./actionTypes";
 
 export function changeQuestion(qid) {

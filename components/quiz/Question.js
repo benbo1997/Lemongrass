@@ -38,6 +38,7 @@ export default class Question extends Component {
                   currAnswer={this.state.currAnswer}
         />
         <View style={myStyles.buttoncontainer}>
+          // TODO lock in selected answer while submit button pressed
           <SubmitButton onPress={() => {this.submitAnswer()}} title={"SUBMIT"}/>
         </View>
       </View>
