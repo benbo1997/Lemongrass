@@ -75,6 +75,7 @@ export default questions = [
       {
         question: 'What is the capital of Evil?',
         correctid: 2,
+        explanation: 'E is the capital letter of Evil',
         answers: [
           {
             text: 'London',
@@ -102,6 +103,7 @@ export default questions = [
       {
         question: 'What is Ben\'s favourite boyband?',
         correctid: 0,
+        explanation: 'Apparently Ben listens to Blue now',
         answers: [
           {
             text: 'Blue',
