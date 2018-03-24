@@ -48,6 +48,14 @@ export default class Quiz extends Component {
     this.props.navigation.navigate('QuizList');
   }
 
+  onReport() {
+    var params = {
+      title: this.props.title,
+      content: this.getQuizContent(this.props.quizid),
+    };
+    this.props.navigation.navigate('QuizReport', params);
+  }
+
   getQuizContent(searchid) {
     for (var i = 0; i < this.props.quizzes.quizzes.length; i++) {
       if (this.props.quizzes.quizzes[i].id == searchid) {
@@ -71,7 +79,8 @@ export default class Quiz extends Component {
           <View style={myStyles.container}>
             <Text style={myStyles.resulttext}>Congratulations, you've completed the quiz!</Text>
             <Text style={myStyles.resulttext}>You scored {markQuiz(this.props.questions.pastAnswers, quizcontent)} points</Text>
-            <Button style={myStyles.button} title={"proceed"} onPress={() => {this.onProceed()}}></Button>
+            <Button style={myStyles.button} title={"proceed"} onPress={() => {this.onProceed()}}/>
+            <Button style={myStyles.button} title={"view report"} onPress={() => {this.onReport()}}/>
           </View>
       );
     }

@@ -26,6 +26,7 @@ export default class Question extends Component {
   }
 
   render() {
+    // TODO lock in selected answer while submit button pressed
     return (
       <View style={myStyles.question}>
         <Text style={myStyles.questiontext}>{this.props.text}</Text>
@@ -38,7 +39,6 @@ export default class Question extends Component {
                   currAnswer={this.state.currAnswer}
         />
         <View style={myStyles.buttoncontainer}>
-          // TODO lock in selected answer while submit button pressed
           <SubmitButton onPress={() => {this.submitAnswer()}} title={"SUBMIT"}/>
         </View>
       </View>
