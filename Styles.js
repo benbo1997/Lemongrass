@@ -6,6 +6,7 @@ export const colors = {
   lemongreen: '#86c232',
   lemondarkgreen: '#61892F',
   lightgrey: '#e9ecef',
+  darkgrey: '#cccccc',
   sky: '#7CD8D5',
   electric: '#4cdef5',
   cyan: '#62EDD6',
@@ -17,6 +18,7 @@ export const colors = {
   background: '#bf5bb5',
   shadow: '#1b1b1b',
   wrong: '#b30000',
+  gold: '#ffcc00',
 };
 
 let font = Platform.OS === "android" ? 'Roboto' :'Avenir';

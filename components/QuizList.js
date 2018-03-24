@@ -48,6 +48,8 @@ export default class QuizList extends Component {
     this.state = {
       isLoading: true
     }
+
+    // TODO potentially replace this with downloading quizzes via backend
     this.props.loadQuizRecieved(questions[0]);
     this.props.loadQuizRecieved(questions[1]);
   }

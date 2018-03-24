@@ -3,6 +3,9 @@ import { Text, View, FlatList} from 'react-native';
 import Button from '../Button';
 import myStyles, {colors} from '../../Styles';
 import { withMappedNavigationProps } from 'react-navigation-props-mapper';
+import {Circle} from 'react-native-progress';
+import PercentCircle from 'react-native-percent-circle';
+import {AnimatedCircularProgress} from 'react-native-circular-progress';
 import BackButton from "../BackButton";
 import questions from "../../QuestionContent";
 import Question from "./Question";
@@ -23,8 +26,7 @@ function markQuiz(answerArray, questions) {
 export default class Quiz extends Component {
   static navigationOptions = ({navigation}) => ({
     title: 'Quiz',
-    headerStyle: myStyles.header,
-    headerTitleStyle: myStyles.headertitle,
+    headerStyle: myStyles.header, headerTitleStyle: myStyles.headertitle,
     headerLeft: <BackButton
         onPress={ () => { navigation.goBack() }} />,
   })
@@ -76,10 +78,26 @@ export default class Quiz extends Component {
     let quizcontent = this.getQuizContent(this.props.quizid);
 
     if (this.isFinished()) {
+      let score = markQuiz(this.props.questions.pastAnswers, quizcontent);
       return (
           <View style={myStyles.container}>
             <Text style={myStyles.resulttext}>Congratulations, you've completed the quiz!</Text>
-            <Text style={myStyles.resulttext}>You scored {markQuiz(this.props.questions.pastAnswers, quizcontent)} points</Text>
+            <Text style={myStyles.resulttext}>You scored {score} out of {quizcontent.length}</Text>
+            <AnimatedCircularProgress
+                size={120}
+                width={15}
+                fill={(score / quizcontent.length) * 100}
+                rotation={0}
+                tintColor={colors.gold}
+                backgroundColor={colors.darkgrey}>
+              {
+                (fill) => (
+                    <Text style={styles.points}>
+                      { parseInt((score / quizcontent.length) * 100)} %
+                    </Text>
+                )
+              }
+            </AnimatedCircularProgress>
             <Button style={myStyles.button} title={"proceed"} onPress={() => {this.onProceed()}}/>
             <Button style={myStyles.button} title={"view report"} onPress={() => {this.onReport()}}/>
           </View>
