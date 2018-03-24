@@ -11,6 +11,7 @@ export default class QuestionFeedback extends Component {
   render () {
     console.log(this.props.question.question);
     console.log(this.props.question.correctid);
+    // TODO Remove hardcoded style as in InfoView
     return (
         <View style={myStyles.listitem}>
           <Text style={{
