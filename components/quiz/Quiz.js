@@ -46,8 +46,16 @@ export default class Quiz extends Component {
     this.props.changeQuestion(this.props.questions.questionid + 1);
   }
 
+  getQuizContent(searchid) {
+    for (var i = 0; i < this.props.quizzes.quizzes.length; i++) {
+      if (this.props.quizzes.quizzes[i].id == searchid) {
+        return this.props.quizzes.quizzes[i].content;
+      }
+    }
+  }
+
   isFinished() {
-    let numQuestions = this.props.quizzes.quizzes[this.props.quizid].content.length;
+    let numQuestions = this.getQuizContent(this.props.quizid).length;
     return this.props.questions.questionid >= numQuestions;
   }
 
@@ -56,7 +64,7 @@ export default class Quiz extends Component {
     console.log(this.props.questions);
     console.log(this.props.quizzes);
     let questionid = this.props.questions.questionid;
-    let quizcontent = this.props.quizzes.quizzes[this.props.quizid].content;
+    let quizcontent = this.getQuizContent(this.props.quizid);
 
     if (this.isFinished()) {
       return (

@@ -49,6 +49,7 @@ export default class QuizList extends Component {
       isLoading: true
     }
     this.props.loadQuizRecieved(questions[0]);
+    this.props.loadQuizRecieved(questions[1]);
   }
 
   componentDidMount() {
