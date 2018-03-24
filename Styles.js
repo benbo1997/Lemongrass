@@ -16,6 +16,7 @@ export const colors = {
   teal: '#07889b',
   background: '#bf5bb5',
   shadow: '#1b1b1b',
+  wrong: '#b30000',
 };
 
 let font = Platform.OS === "android" ? 'Roboto' :'Avenir';

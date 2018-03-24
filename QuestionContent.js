@@ -10,6 +10,7 @@ export default questions = [
       {
         question: 'What is the capital of England?',
         correctid: 0,
+        explanation: "London is the capital city of England.",
         answers: [
           {
             text: 'London',
@@ -35,7 +36,8 @@ export default questions = [
       },
       {
         question: 'What is Ben\'s favourite colour?',
-        correctid: 4,
+        correctid: 3,
+        explanation: "Contrary to popular belief, Ben does not hold a ranking over his favourite colours.",
         answers: [
           {
             text: 'Blue',

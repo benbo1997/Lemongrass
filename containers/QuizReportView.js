@@ -20,7 +20,7 @@ export default class QuizReportView extends Component {
     // TODO remove hardcoded styles as in InfoView
     return (
         <View style={myStyles.container}>
-          <QuizReport content={this.props.content}/>
+          <QuizReport content={this.props.content} userAnswers={this.props.userAnswers}/>
         </View>
     );
   }

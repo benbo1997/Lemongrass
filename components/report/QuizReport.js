@@ -7,13 +7,17 @@ export default class QuizReport extends Component {
 
   constructor(props) {
     super(props);
+    console.log("TEST");
+    console.log(this.props.userAnswers);
   }
 
   render () {
     return (
         <FlatList style={myStyles.optionlist}
                   data={this.props.content}
-                  renderItem={({item}) => <QuestionFeedback question={item}/>}
+                  renderItem={({item, index}) => <QuestionFeedback
+                      question={item}
+                      isCorrect={this.props.userAnswers[index] == item.correctid}/>}
         />
     );
   }

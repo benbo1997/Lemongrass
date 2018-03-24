@@ -52,6 +52,7 @@ export default class Quiz extends Component {
     var params = {
       title: this.props.title,
       content: this.getQuizContent(this.props.quizid),
+      userAnswers: this.props.questions.pastAnswers,
     };
     this.props.navigation.navigate('QuizReport', params);
   }
