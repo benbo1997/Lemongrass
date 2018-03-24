@@ -1,5 +1,7 @@
 import React from 'react';
 
+export var DAILY_QUIZ_GOAL = 5;
+
 export default questions = [
   {
     title: "QUIZ NUMBER 1",

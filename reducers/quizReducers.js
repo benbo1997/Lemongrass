@@ -2,6 +2,7 @@ import * as types from '../actions/actionTypes';
 import {combineReducers} from 'redux';
 
 const initialQuestionsState = {
+  answered: 0,
   questionid: 0,
   pastAnswers: [],
 };
@@ -27,7 +28,12 @@ function questions (state = initialQuestionsState, action) {
           pastAnswers: newAnswers,
       };
     case types.RESET_QUIZ:
-      return initialQuestionsState;
+      // this currently updates the number of quizzes answered.
+      return {
+          answered: state.answered + 1,
+          questionid: 0,
+          pastAnswers: [],
+      };
     default:
       return state;
   }

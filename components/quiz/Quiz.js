@@ -7,7 +7,7 @@ import {Circle} from 'react-native-progress';
 import PercentCircle from 'react-native-percent-circle';
 import {AnimatedCircularProgress} from 'react-native-circular-progress';
 import BackButton from "../BackButton";
-import questions from "../../QuestionContent";
+import questions, {DAILY_QUIZ_GOAL} from "../../QuestionContent";
 import Question from "./Question";
 
 function markQuiz(answerArray, questions) {
@@ -98,6 +98,10 @@ export default class Quiz extends Component {
                 )
               }
             </AnimatedCircularProgress>
+            <Text style={myStyles.resulttext}>You've completed {this.props.questions.answered + 1} quizzes today</Text>
+            {this.props.questions.answered + 1 < DAILY_QUIZ_GOAL ?
+              <Text style={myStyles.resulttext}>Only {DAILY_QUIZ_GOAL - (this.props.questions.answered + 1)} more quizzes to meet your goal today</Text> : null
+            }
             <Button style={myStyles.button} title={"proceed"} onPress={() => {this.onProceed()}}/>
             <Button style={myStyles.button} title={"view report"} onPress={() => {this.onReport()}}/>
           </View>
