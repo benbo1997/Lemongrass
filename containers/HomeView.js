@@ -20,25 +20,31 @@ export default class HomeView extends Component {
           <Image
               top={20}
               style={{position:'absolute', width:360, height:300}}
-              source={require('../resources/forest.jpeg')}
+              source={require('../resources/images/forest.jpeg')}
           />
           <Image
               top={125}
               style={{width:360, height:100}}
-              source={require('../resources/design1.jpg')}
+              source={require('../resources/images/design1.jpg')}
           />
           <View top={280} style={myStyles.buttoncontainer}>
             <Button
                 onPress={() =>
                   navigate('Learn')
                 }
-                title="LEARN"
+                title="study"
             />
             <Button
                 onPress={() =>
                     navigate('QuizList')
                 }
-                title="QUIZ"
+                title="train"
+            />
+            <Button
+                onPress={() =>
+                  navigate('Funds')
+                }
+                title="impact"
             />
           </View>
         </View>

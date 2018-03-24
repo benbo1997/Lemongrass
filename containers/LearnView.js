@@ -6,7 +6,6 @@ import BackButton from "../components/BackButton";
 
 export default class LearnView extends Component {
   static navigationOptions = ({navigation}) => ({
-    title: 'Topics',
     headerStyle: myStyles.header,
     headerTitleStyle: myStyles.headertitle,
     headerLeft: <BackButton

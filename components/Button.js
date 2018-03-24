@@ -12,7 +12,7 @@ export default class Button extends Component {
       <View style={myStyles.button}>
         <TouchableHighlight
             onPress={this.props.onPress}
-            underlayColor={colors.lemongreen}
+            underlayColor={colors.lightgrey}
             activeOpacity={50}>
           <Text style={myStyles.buttontext}>{this.props.title}</Text>
         </TouchableHighlight>

@@ -33,7 +33,6 @@ export default questions = [
           },
         ]
       },
-
       {
         question: 'What is Ben\'s favourite colour?',
         correctid: 4,
@@ -54,14 +53,9 @@ export default questions = [
             key: '3',
           },
           {
-            text: 'Purple',
+            text: 'Ben doesn\'t see colour',
             id: 3,
             key: '4',
-          },
-          {
-            text: 'Ben doesn\'t see colour',
-            id: 4,
-            key: '5',
           },
         ]
       },

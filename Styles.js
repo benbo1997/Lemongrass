@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Dimensions } from 'react-native';
+import { Platform, StyleSheet, Dimensions } from 'react-native';
 
 const {width, height} = Dimensions.get('window');
 export const colors = {
@@ -12,10 +12,14 @@ export const colors = {
   aqua: '#008F95',
   ink: '#062F4F',
   azure: '#01ABAA',
-  violet: '#6E3667',
+  violet: '#9c3f95',
   teal: '#07889b',
-  background: '#6e3667',
-}
+  background: '#bf5bb5',
+  shadow: '#1b1b1b',
+};
+
+let font = Platform.OS === "android" ? 'Roboto' :'Avenir';
+
 
 export default styles = StyleSheet.create({
   header: {
@@ -23,6 +27,8 @@ export default styles = StyleSheet.create({
   },
   headertitle: {
     color: colors.lightgrey,
+    fontFamily: Platform.OS === "android" ? 'sans-serif-light' :'Avenir',
+    fontSize: Platform.OS === "android" ? 14 : 14,
   },
   plaintext: {
     fontSize: 18,
@@ -32,23 +38,37 @@ export default styles = StyleSheet.create({
   },
   questiontext: {
     fontSize: 24,
-    padding: 10,
+    padding: 50,
+    fontFamily: font,
   },
   resulttext: {
-    fontSize: 24,
+    fontSize: 14,
     padding: 10,
     textAlign: 'center',
+    fontFamily: font,
   },
   buttontext: {
-    fontSize: 24,
-    color: '#fff',
+    fontSize: 18,
+    color: '#000',
     textAlign: 'center',
+    fontFamily: font,
+  },
+  buttontextPress: {
+    fontSize: 18,
+    color: colors.lemongreen,
+    textAlign: 'center',
+    fontFamily: font,
   },
   listitem: {
-    backgroundColor: colors.azure,
-    margin: 5,
-    padding: 5,
+    backgroundColor: colors.lightgrey,
+    margin: 2,
+    padding: 20,
     width: width - 10,
+    shadowOffset:{width: 0, height:1},
+    shadowColor:'#000',
+    shadowRadius: 1,
+    shadowOpacity:.1,
+    elevation: 1,
   },
   optionlist: {
     paddingLeft: 5,
@@ -76,24 +96,31 @@ export default styles = StyleSheet.create({
     margin: 5,
   },
   twoButtonLower: {
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
     margin: 5,
   },
   button: {
-    backgroundColor: colors.lemongreen,
+    backgroundColor: colors.lightgrey,
     width: (width - 100),
     paddingLeft: 20,
     paddingRight: 20,
-    paddingTop: 5,
-    paddingBottom: 5,
-    margin: 5,
+    paddingTop: 10,
+    paddingBottom: 10,
+    margin: 10,
     alignContent: 'center',
     flexDirection: 'column',
-    shadowOffset:{width: 10, height:10},
-    shadowColor:'#000',
-    shadowRadius: 5,
-    shadowOpacity:1.0,
-    elevation: 3,
+    shadowOffset:{width: 1, height:1},
+    shadowColor: colors.shadow,
+    shadowRadius: 3,
+    shadowOpacity:.2,
+    elevation: 2,
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: colors.lightgrey,
+  },
+  submitButton:{
+    alignItems: 'center',
+    paddingBottom: 60,
   },
   buttoncontainer:{
     flexDirection: 'column',

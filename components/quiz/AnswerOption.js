@@ -14,19 +14,17 @@ export default class Answer extends Component {
 
   render () {
     return (
-        <TouchableHighlight onPress={() => {this._onPress()}}>
+        <TouchableHighlight
+          onPress={() => {this._onPress()}}
+          activeOpacity={1}
+          underlayColor={colors.lightgrey}
+        >
           <View style={myStyles.listitem}>
-            <Text style={myStyles.buttontext}>{this.props.title}</Text>
-            { this.props.isPressed ?
-                <Icon name={'check'} size={20} style={{
-                  position: 'absolute',
-                  marginLeft: 10,
-                  marginTop: 10,
-                  color: '#fff'
-                }}/> : null
-            }
+            <Text style={this.props.isPressed ? myStyles.buttontextPress : myStyles.buttontext}>{this.props.title}
+            </Text>
           </View>
         </TouchableHighlight>
+
     )
   }
 }
