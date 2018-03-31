@@ -16,7 +16,7 @@ export default class HintButton extends Component {
     return (
       <View style={{ flex: 1 }}>
         <TouchableOpacity onPress={this._toggleModal}>
-          <Text>Hint</Text>
+          <Text style={{ color: colors.lemongreen }}>Hint</Text>
         </TouchableOpacity>
         <Modal isVisible={this.state.isModalVisible}>
           <View style={myStyles.hintContainer}>

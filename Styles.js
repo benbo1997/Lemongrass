@@ -39,6 +39,11 @@ export default styles = StyleSheet.create({
   subtitle: {
     fontSize: 24,
   },
+  subtitle2: {
+    textAlign: 'center',
+    fontSize: 24,
+    color: '#fff',
+  },
   questiontext: {
     fontSize: 24,
     padding: 50,
@@ -98,10 +103,9 @@ export default styles = StyleSheet.create({
   },
   learnsection: {
     flex:1,
-    // width:(width +1),
     padding: 50,
     margin: 5,
-    backgroundColor: '#58704b',
+    backgroundColor: '#3b9fe5',
   },
   learnsectiontitle: {
     fontSize: 24,

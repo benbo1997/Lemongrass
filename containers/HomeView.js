@@ -42,7 +42,7 @@ export default class HomeView extends Component {
             />
             <Button
                 onPress={() =>
-                  navigate('Funds')
+                  navigate('Impacts')
                 }
                 title="impact"
             />

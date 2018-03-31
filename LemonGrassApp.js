@@ -3,6 +3,7 @@ import { Platform, StatusBar } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import FundsView from './containers/FundsView';
 import HomeView from './containers/HomeView';
+import ImpactsView from './containers/ImpactsView';
 import InfoView from './containers/InfoView';
 import LearnView from './containers/LearnView';
 import QuizView from "./containers/QuizView";
@@ -12,6 +13,7 @@ import QuizReportView from "./containers/QuizReportView";
 const AppNav = StackNavigator(
     {
       Home: {screen: HomeView},
+      Impacts: {screen: ImpactsView},
       Funds: {screen: FundsView},
       Info: {screen: InfoView},
       Learn: {screen: LearnView},

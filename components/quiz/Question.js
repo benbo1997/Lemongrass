@@ -39,7 +39,7 @@ export default class Question extends Component {
                                                         onRowPress={(id) => {this.selectAnswer(id)}}/>}
                   currAnswer={this.state.currAnswer}
         />
-        <HintButton/>
+        <HintButton></HintButton>
         <View style={myStyles.buttoncontainer}>
           <SubmitButton onPress={() => {this.submitAnswer()}} title={"SUBMIT"}/>
         </View>
