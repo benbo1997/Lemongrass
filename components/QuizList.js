@@ -32,7 +32,7 @@ class ListItem extends Component {
 
 export default class QuizList extends Component {
   static navigationOptions = ({navigation}) => ({
-    title: 'QuizList',
+    title: 'Train',
     headerStyle: myStyles.header,
     headerTitleStyle: myStyles.headertitle,
     headerLeft: <BackButton

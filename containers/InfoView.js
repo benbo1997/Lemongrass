@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import {Image, Platform, Text, View} from 'react-native';
 import myStyles, {colors} from '../Styles';
+import BackButton from "../components/BackButton";
 
 export default class InfoView extends Component {
   static navigationOptions = ({navigation}) => ({
     title: navigation.state.params.title,
     headerStyle: myStyles.header,
     headerTitleStyle: myStyles.headertitle,
+    headerLeft: <BackButton
+        onPress={ () => { navigation.goBack() }} />,
   });
+
 
   render() {
     const {params} = this.props.navigation.state;

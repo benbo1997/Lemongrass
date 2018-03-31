@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { NewsFeed } from '../components/NewsFeed';
 import myStyles, {colors} from '../Styles';
+import BackButton from "../components/BackButton";
 
 export default class FundsView extends Component {
-  static navigationOptions = {
-    title: 'Funds',
-    headerStyle: myStyles.header,
-    headerTitleStyle: myStyles.headertitle,
-  }
+  static navigationOptions = ({navigation}) => ({
+    title: 'Impact',
+    headerStyle: myStyles.header, headerTitleStyle: myStyles.headertitle,
+    headerLeft: <BackButton
+        onPress={ () => { navigation.goBack() }} />,
+  })
 
   constructor(props) {
     super(props);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, Button, View, FlatList, Alert, TouchableHighlight} from 'react-native';
-import myStyles from '../Styles';
+import myStyles, {colors} from '../Styles';
 
 class ListItem extends Component {
   constructor(props) {
@@ -16,7 +16,10 @@ class ListItem extends Component {
 
   render () {
     return (
-        <TouchableHighlight onPress={() => {this._onPress()}}>
+        <TouchableHighlight 
+        onPress={() => {this._onPress()}}
+        activeOpacity={1}
+        underlayColor={colors.lightgrey}>
           <View style={myStyles.listitem}>
             <Text style={myStyles.subtitle}>{this.props.title}</Text>
             <Text style={myStyles.plaintext}>{this.props.description}</Text>

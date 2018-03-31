@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Text, Button, View, SectionList, Alert, TouchableHighlight} from 'react-native';
 import myStyles, {colors} from '../Styles';
-import TwoColourButton from "./TwoColourButton";
 
 class ListItem extends Component {
   constructor(props) {
@@ -17,16 +16,15 @@ class ListItem extends Component {
 
   render () {
     return (
-        <TwoColourButton
-          title={this.props.title}
-          description={this.props.description}
-          onPress={() => {this._onPress()}}/>
-        // <TouchableHighlight onPress={() => {this._onPress()}}>
-        //   <View style={myStyles.listitem}>
-        //     <Text style={myStyles.subtitle}>{this.props.title}</Text>
-        //     <Text style={myStyles.plaintext}>{this.props.description}</Text>
-        //   </View>
-        // </TouchableHighlight>
+        <TouchableHighlight 
+        onPress={() => {this._onPress()}}
+        activeOpacity={1}
+        underlayColor={colors.lightgrey}>
+          <View style={myStyles.learnitem}>
+            <Text style={myStyles.learnitemtext}>{this.props.title}</Text>
+            <Text style={myStyles.learnitemplaintext}>{this.props.description}</Text>
+          </View>
+        </TouchableHighlight>
     )
   }
 }
@@ -38,8 +36,8 @@ class ListHeader extends Component {
 
   render () {
     return (
-        <View style={ {padding: 15, backgroundColor: colors.lemondarkgreen}}>
-        <Text style={myStyles.subtitle}>{this.props.title}</Text>
+        <View style={myStyles.learnsection}>
+        <Text style={myStyles.learnsectiontitle}>{this.props.title}</Text>
         </View>
     );
   }
